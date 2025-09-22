@@ -1,0 +1,154 @@
+{
+  "model_version": "meridian_2025_09_20",
+  "period": "2025-Q2",
+  "kpi_name": "revenue",
+  "kpi_unit": "USD",
+  "channels": [
+    {
+      "id": "google_ads",
+      "name": "Google Ads",
+      "spend": 90000.0,
+      "contribution_pct": 0.27,
+      "incremental_kpi": 125000.0,
+      "roi": 1.39,
+      "mroi": 0.018,
+      "observed_spend_min": 60000.0,
+      "observed_spend_max": 120000.0,
+      "response_curve_points": [
+        {"spend": 60000, "pred_kpi": 78000, "mroi": 0.021, "saturation_pct": 70},
+        {"spend": 90000, "pred_kpi": 125000, "mroi": 0.018, "saturation_pct": 78},
+        {"spend": 120000, "pred_kpi": 148000, "mroi": 0.015, "saturation_pct": 85}
+      ],
+      "adstock": {"decay": 0.6, "max_lag_weeks": 8},
+      "hill": {"half_sat": 65000, "alpha": 1.2}
+    },
+    {
+      "id": "facebook_ads",
+      "name": "Facebook Ads",
+      "spend": 110000.0,
+      "contribution_pct": 0.33,
+      "incremental_kpi": 160000.0,
+      "roi": 1.45,
+      "mroi": 0.017,
+      "observed_spend_min": 70000.0,
+      "observed_spend_max": 150000.0,
+      "response_curve_points": [
+        {"spend": 70000, "pred_kpi": 98000, "mroi": 0.022, "saturation_pct": 68},
+        {"spend": 110000, "pred_kpi": 160000, "mroi": 0.017, "saturation_pct": 80},
+        {"spend": 150000, "pred_kpi": 190000, "mroi": 0.013, "saturation_pct": 89}
+      ],
+      "adstock": {"decay": 0.55, "max_lag_weeks": 7},
+      "hill": {"half_sat": 75000, "alpha": 1.1}
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "spend": 50000.0,
+      "contribution_pct": 0.18,
+      "incremental_kpi": 70000.0,
+      "roi": 1.40,
+      "mroi": 0.014,
+      "observed_spend_min": 30000.0,
+      "observed_spend_max": 90000.0,
+      "response_curve_points": [
+        {"spend": 30000, "pred_kpi": 42000, "mroi": 0.020, "saturation_pct": 55},
+        {"spend": 50000, "pred_kpi": 70000, "mroi": 0.014, "saturation_pct": 72},
+        {"spend": 90000, "pred_kpi": 105000, "mroi": 0.010, "saturation_pct": 88}
+      ],
+      "adstock": {"decay": 0.5, "max_lag_weeks": 6},
+      "hill": {"half_sat": 45000, "alpha": 1.15}
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "spend": 40000.0,
+      "contribution_pct": 0.12,
+      "incremental_kpi": 50000.0,
+      "roi": 1.25,
+      "mroi": 0.019,
+      "observed_spend_min": 20000.0,
+      "observed_spend_max": 70000.0,
+      "response_curve_points": [
+        {"spend": 20000, "pred_kpi": 27000, "mroi": 0.022, "saturation_pct": 48},
+        {"spend": 40000, "pred_kpi": 50000, "mroi": 0.019, "saturation_pct": 65},
+        {"spend": 70000, "pred_kpi": 77000, "mroi": 0.015, "saturation_pct": 82}
+      ],
+      "adstock": {"decay": 0.62, "max_lag_weeks": 9},
+      "hill": {"half_sat": 35000, "alpha": 1.05}
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "spend": 30000.0,
+      "contribution_pct": 0.10,
+      "incremental_kpi": 35000.0,
+      "roi": 1.16,
+      "mroi": 0.012,
+      "observed_spend_min": 15000.0,
+      "observed_spend_max": 60000.0,
+      "response_curve_points": [
+        {"spend": 15000, "pred_kpi": 18000, "mroi": 0.015, "saturation_pct": 42},
+        {"spend": 30000, "pred_kpi": 35000, "mroi": 0.012, "saturation_pct": 61},
+        {"spend": 60000, "pred_kpi": 67000, "mroi": 0.011, "saturation_pct": 79}
+      ],
+      "adstock": {"decay": 0.45, "max_lag_weeks": 5},
+      "hill": {"half_sat": 25000, "alpha": 1.08}
+    },
+    {
+      "id": "snapchat",
+      "name": "Snapchat",
+      "spend": 25000.0,
+      "contribution_pct": 0.08,
+      "incremental_kpi": 28000.0,
+      "roi": 1.12,
+      "mroi": 0.010,
+      "observed_spend_min": 10000.0,
+      "observed_spend_max": 50000.0,
+      "response_curve_points": [
+        {"spend": 10000, "pred_kpi": 12000, "mroi": 0.014, "saturation_pct": 35},
+        {"spend": 25000, "pred_kpi": 28000, "mroi": 0.010, "saturation_pct": 58},
+        {"spend": 50000, "pred_kpi": 52000, "mroi": 0.008, "saturation_pct": 75}
+      ],
+      "adstock": {"decay": 0.48, "max_lag_weeks": 6},
+      "hill": {"half_sat": 20000, "alpha": 1.1}
+    },
+    {
+      "id": "twitter_ads",
+      "name": "Twitter Ads",
+      "spend": 35000.0,
+      "contribution_pct": 0.09,
+      "incremental_kpi": 40000.0,
+      "roi": 1.14,
+      "mroi": 0.011,
+      "observed_spend_min": 20000.0,
+      "observed_spend_max": 60000.0,
+      "response_curve_points": [
+        {"spend": 20000, "pred_kpi": 23000, "mroi": 0.013, "saturation_pct": 40},
+        {"spend": 35000, "pred_kpi": 40000, "mroi": 0.011, "saturation_pct": 59},
+        {"spend": 60000, "pred_kpi": 65000, "mroi": 0.010, "saturation_pct": 77}
+      ],
+      "adstock": {"decay": 0.5, "max_lag_weeks": 6},
+      "hill": {"half_sat": 28000, "alpha": 1.07}
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "spend": 20000.0,
+      "contribution_pct": 0.07,
+      "incremental_kpi": 22000.0,
+      "roi": 1.10,
+      "mroi": 0.009,
+      "observed_spend_min": 10000.0,
+      "observed_spend_max": 40000.0,
+      "response_curve_points": [
+        {"spend": 10000, "pred_kpi": 11500, "mroi": 0.012, "saturation_pct": 30},
+        {"spend": 20000, "pred_kpi": 22000, "mroi": 0.009, "saturation_pct": 50},
+        {"spend": 40000, "pred_kpi": 42000, "mroi": 0.008, "saturation_pct": 73}
+      ],
+      "adstock": {"decay": 0.44, "max_lag_weeks": 4},
+      "hill": {"half_sat": 18000, "alpha": 1.06}
+    }
+  ],
+  "diagnostics": {"r2": 0.84, "mape": 0.13}
+}
+
