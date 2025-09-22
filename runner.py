@@ -8,6 +8,7 @@ def main():
                         help="Which function to run: channel, safe, best, ai")
     parser.add_argument("--name", type=str, help="Channel name (for channel/safe/ai modes)")
     parser.add_argument("--question", type=str, help="User question (for ai mode only)")
+    
     args = parser.parse_args()
 
     if args.mode == "channel":

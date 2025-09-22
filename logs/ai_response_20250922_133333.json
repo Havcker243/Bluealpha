@@ -1,0 +1,556 @@
+{
+  "question": "In what areas do you think I need to better my investments ",
+  "channel": null,
+  "timestamp": "2025-09-22T13:33:33.884828",
+  "response": "**Answer**\nYou can improve your investments by reallocating funds from channels with low marginal returns, such as Pinterest and Snapchat, to TikTok, which currently offers the best return for each additional dollar spent.\n\n**Explanation**\nYour investment strategy should be guided by Marginal ROI (mROI), which measures the return on your *next* dollar of spend. A higher mROI indicates a better opportunity for growth. Currently, some of your channels are reaching saturation, meaning more spending won't deliver proportional returns.\n\n*   **Top Opportunity:** **TikTok** has the highest mROI at **0.019**. This means for every extra dollar you spend, you are getting the most back compared to any other channel. Its saturation is also relatively low at 65%, indicating there is more room to efficiently scale spend.\n*   **Saturated Performers:** While **Facebook Ads** and **Google Ads** are your strongest channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but lower than TikTok's, suggesting the next dollar spent there is slightly less effective.\n*   **Areas for Reduction:** **Pinterest**, **Snapchat**, **Twitter Ads**, and **LinkedIn** have the lowest mROIs. **Pinterest** is the most inefficient for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These channels are providing a poor return on incremental spending and their budgets should be reconsidered.\n\n**Recommendations**\n1.  **Increase Spend on TikTok:** Shift budget into TikTok to capitalize on its high mROI of 0.019. It has the most potential for efficient growth.\n2.  **Decrease Spend on Underperformers:** Significantly reduce your investment in **Pinterest** (mROI 0.009) and **Snapchat** (mROI 0.010). The funds from these channels will be more effective elsewhere.\n3.  **Maintain and Monitor Top Channels:** Continue investing in Google Ads and Facebook Ads, but monitor their mROI closely. As they are nearing saturation, future budget increases should be cautious.\n\n**Guardrails**\nThis analysis is based on the observed weekly spend ranges within the model. Performance may differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Facebook Ads:** $70,000 - $150,000\n\n**Source**\nModel Version: meridian_2025_09_20\nData Period: 2025-Q2\n\n**Confidence**\nHigh (The model's R-squared of 0.84 and MAPE of 0.13 indicate a strong and reliable fit to the data.)",
+  "validation": {
+    "adaptive_validation": {
+      "valid": false,
+      "errors": [
+        {
+          "value": "0.010",
+          "context": " of only **0.009**, followed by **Snapchat** at **0.010**. These channels are providing a poor return on ",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "2.",
+          "context": ". It has the most potential for efficient growth.\n2.  **Decrease Spend on Underperformers:** Significa",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "0.010",
+          "context": " of only **0.009**, followed by **Snapchat** at **0.010**. These channels are providing a poor return on ",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "3.",
+          "context": " these channels will be more effective elsewhere.\n3.  **Maintain and Monitor Top Channels:** Continue ",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI at **0.019",
+          "context": " **Top Opportunity:** **TikTok** has the highest mROI at **0.019**. This means for every extra dollar you spend, y",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI (1.45",
+          "context": " your strongest channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming saturat",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROIs of 0.017",
+          "context": "they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but lower than TikTok's, sug",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROIs. **Pinterest** is the most inefficient for further investment with an mROI of only **0.009",
+          "context": "*Twitter Ads**, and **LinkedIn** have the lowest mROIs. **Pinterest** is the most inefficient for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These c",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI of 0.019",
+          "context": "ift budget into TikTok to capitalize on its high mROI of 0.019. It has the most potential for efficient growth.\n",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI 0.009",
+          "context": "icantly reduce your investment in **Pinterest** (mROI 0.009) and **Snapchat** (mROI 0.010). The funds from th",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI 0.010",
+          "context": " in **Pinterest** (mROI 0.009) and **Snapchat** (mROI 0.010). The funds from these channels will be more effe",
+          "message": "Value not found in source data"
+        }
+      ],
+      "warnings": [],
+      "verified_claims": [
+        {
+          "value": "0.019",
+          "context": "portunity:** **TikTok** has the highest mROI at **0.019**. This means for every extra dollar you spend, y",
+          "status": "verified"
+        },
+        {
+          "value": "65%",
+          "context": "channel. Its saturation is also relatively low at 65%, indicating there is more room to efficiently sca",
+          "status": "verified"
+        },
+        {
+          "value": "1.45",
+          "context": " strongest channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming saturat",
+          "status": "verified"
+        },
+        {
+          "value": "1.39",
+          "context": "t channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming saturated (80% a",
+          "status": "verified"
+        },
+        {
+          "value": "80%",
+          "context": " 1.39 respectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are soli",
+          "status": "verified"
+        },
+        {
+          "value": "78%",
+          "context": "spectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but l",
+          "status": "verified"
+        },
+        {
+          "value": "0.017",
+          "context": " becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but lower than TikTok's, sug",
+          "status": "verified"
+        },
+        {
+          "value": "0.018",
+          "context": "saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but lower than TikTok's, suggesting th",
+          "status": "verified"
+        },
+        {
+          "value": "0.009",
+          "context": "ent for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These c",
+          "status": "verified"
+        },
+        {
+          "value": "1.",
+          "context": " strongest channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming satur",
+          "status": "verified"
+        },
+        {
+          "value": "0.019",
+          "context": "portunity:** **TikTok** has the highest mROI at **0.019**. This means for every extra dollar you spend, y",
+          "status": "verified"
+        },
+        {
+          "value": "0.009",
+          "context": "ent for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These c",
+          "status": "verified"
+        },
+        {
+          "value": "$20",
+          "context": " may differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,00",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$70",
+          "context": "r outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Sn",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$10",
+          "context": " **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$40",
+          "context": "** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000\n*   **Goo",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$10",
+          "context": " **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$50",
+          "context": ":** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000\n*   **Google Ads:** $60,000 - $120,000\n*   **",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$60",
+          "context": "Snapchat:** $10,000 - $50,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Facebook Ads:** $70,000 - $1",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$120",
+          "context": "* $10,000 - $50,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Facebook Ads:** $70,000 - $150,000\n\n**S",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$70",
+          "context": "r outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Sn",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$150",
+          "context": "60,000 - $120,000\n*   **Facebook Ads:** $70,000 - $150,000\n\n**Source**\nModel Version: meridian_2025_09_2",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "2025",
+          "context": "00 - $150,000\n\n**Source**\nModel Version: meridian_2025_09_20\nData Period: 2025-Q2\n\n**Confidence**\nHigh (",
+          "status": "verified"
+        },
+        {
+          "value": "09",
+          "context": " for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These c",
+          "status": "verified"
+        },
+        {
+          "value": "20",
+          "context": "may differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,00",
+          "status": "verified"
+        },
+        {
+          "value": "2025",
+          "context": "00 - $150,000\n\n**Source**\nModel Version: meridian_2025_09_20\nData Period: 2025-Q2\n\n**Confidence**\nHigh (",
+          "status": "verified"
+        },
+        {
+          "value": "2",
+          "context": ". It has the most potential for efficient growth.\n2.  **Decrease Spend on Underperformers:** Signific",
+          "status": "verified"
+        },
+        {
+          "value": "0.84",
+          "context": "Q2\n\n**Confidence**\nHigh (The model's R-squared of 0.84 and MAPE of 0.13 indicate a strong and reliable f",
+          "status": "verified"
+        },
+        {
+          "value": "0.13",
+          "context": "*\nHigh (The model's R-squared of 0.84 and MAPE of 0.13 indicate a strong and reliable fit to the data.)",
+          "status": "verified"
+        },
+        {
+          "value": "65%",
+          "context": "channel. Its saturation is also relatively low at 65%, indicating there is more room to efficiently sca",
+          "status": "verified"
+        },
+        {
+          "value": "80%",
+          "context": " 1.39 respectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are soli",
+          "status": "verified"
+        },
+        {
+          "value": "78%",
+          "context": "spectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but l",
+          "status": "verified"
+        }
+      ],
+      "strategy": "general_fact_check"
+    },
+    "general_validation": {
+      "valid": false,
+      "errors": [
+        {
+          "value": "0.010",
+          "context": " of only **0.009**, followed by **Snapchat** at **0.010**. These channels are providing a poor return on ",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "2.",
+          "context": ". It has the most potential for efficient growth.\n2.  **Decrease Spend on Underperformers:** Significa",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "0.010",
+          "context": " of only **0.009**, followed by **Snapchat** at **0.010**. These channels are providing a poor return on ",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "3.",
+          "context": " these channels will be more effective elsewhere.\n3.  **Maintain and Monitor Top Channels:** Continue ",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI at **0.019",
+          "context": " **Top Opportunity:** **TikTok** has the highest mROI at **0.019**. This means for every extra dollar you spend, y",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI (1.45",
+          "context": " your strongest channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming saturat",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROIs of 0.017",
+          "context": "they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but lower than TikTok's, sug",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROIs. **Pinterest** is the most inefficient for further investment with an mROI of only **0.009",
+          "context": "*Twitter Ads**, and **LinkedIn** have the lowest mROIs. **Pinterest** is the most inefficient for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These c",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI of 0.019",
+          "context": "ift budget into TikTok to capitalize on its high mROI of 0.019. It has the most potential for efficient growth.\n",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI 0.009",
+          "context": "icantly reduce your investment in **Pinterest** (mROI 0.009) and **Snapchat** (mROI 0.010). The funds from th",
+          "message": "Value not found in source data"
+        },
+        {
+          "value": "ROI 0.010",
+          "context": " in **Pinterest** (mROI 0.009) and **Snapchat** (mROI 0.010). The funds from these channels will be more effe",
+          "message": "Value not found in source data"
+        }
+      ],
+      "warnings": [],
+      "verified_claims": [
+        {
+          "value": "0.019",
+          "context": "portunity:** **TikTok** has the highest mROI at **0.019**. This means for every extra dollar you spend, y",
+          "status": "verified"
+        },
+        {
+          "value": "65%",
+          "context": "channel. Its saturation is also relatively low at 65%, indicating there is more room to efficiently sca",
+          "status": "verified"
+        },
+        {
+          "value": "1.45",
+          "context": " strongest channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming saturat",
+          "status": "verified"
+        },
+        {
+          "value": "1.39",
+          "context": "t channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming saturated (80% a",
+          "status": "verified"
+        },
+        {
+          "value": "80%",
+          "context": " 1.39 respectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are soli",
+          "status": "verified"
+        },
+        {
+          "value": "78%",
+          "context": "spectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but l",
+          "status": "verified"
+        },
+        {
+          "value": "0.017",
+          "context": " becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but lower than TikTok's, sug",
+          "status": "verified"
+        },
+        {
+          "value": "0.018",
+          "context": "saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but lower than TikTok's, suggesting th",
+          "status": "verified"
+        },
+        {
+          "value": "0.009",
+          "context": "ent for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These c",
+          "status": "verified"
+        },
+        {
+          "value": "1.",
+          "context": " strongest channels with the highest overall ROI (1.45 and 1.39 respectively), they are becoming satur",
+          "status": "verified"
+        },
+        {
+          "value": "0.019",
+          "context": "portunity:** **TikTok** has the highest mROI at **0.019**. This means for every extra dollar you spend, y",
+          "status": "verified"
+        },
+        {
+          "value": "0.009",
+          "context": "ent for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These c",
+          "status": "verified"
+        },
+        {
+          "value": "$20",
+          "context": " may differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,00",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$70",
+          "context": "r outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Sn",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$10",
+          "context": " **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$40",
+          "context": "** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000\n*   **Goo",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$10",
+          "context": " **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$50",
+          "context": ":** $10,000 - $40,000\n*   **Snapchat:** $10,000 - $50,000\n*   **Google Ads:** $60,000 - $120,000\n*   **",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$60",
+          "context": "Snapchat:** $10,000 - $50,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Facebook Ads:** $70,000 - $1",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$120",
+          "context": "* $10,000 - $50,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Facebook Ads:** $70,000 - $150,000\n\n**S",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$70",
+          "context": "r outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Sn",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "$150",
+          "context": "60,000 - $120,000\n*   **Facebook Ads:** $70,000 - $150,000\n\n**Source**\nModel Version: meridian_2025_09_2",
+          "status": "verified"
+        },
+        {
+          "value": "000",
+          "context": " differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n* ",
+          "status": "verified"
+        },
+        {
+          "value": "2025",
+          "context": "00 - $150,000\n\n**Source**\nModel Version: meridian_2025_09_20\nData Period: 2025-Q2\n\n**Confidence**\nHigh (",
+          "status": "verified"
+        },
+        {
+          "value": "09",
+          "context": " for further investment with an mROI of only **0.009**, followed by **Snapchat** at **0.010**. These c",
+          "status": "verified"
+        },
+        {
+          "value": "20",
+          "context": "may differ outside these ranges.\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,00",
+          "status": "verified"
+        },
+        {
+          "value": "2025",
+          "context": "00 - $150,000\n\n**Source**\nModel Version: meridian_2025_09_20\nData Period: 2025-Q2\n\n**Confidence**\nHigh (",
+          "status": "verified"
+        },
+        {
+          "value": "2",
+          "context": ". It has the most potential for efficient growth.\n2.  **Decrease Spend on Underperformers:** Signific",
+          "status": "verified"
+        },
+        {
+          "value": "0.84",
+          "context": "Q2\n\n**Confidence**\nHigh (The model's R-squared of 0.84 and MAPE of 0.13 indicate a strong and reliable f",
+          "status": "verified"
+        },
+        {
+          "value": "0.13",
+          "context": "*\nHigh (The model's R-squared of 0.84 and MAPE of 0.13 indicate a strong and reliable fit to the data.)",
+          "status": "verified"
+        },
+        {
+          "value": "65%",
+          "context": "channel. Its saturation is also relatively low at 65%, indicating there is more room to efficiently sca",
+          "status": "verified"
+        },
+        {
+          "value": "80%",
+          "context": " 1.39 respectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are soli",
+          "status": "verified"
+        },
+        {
+          "value": "78%",
+          "context": "spectively), they are becoming saturated (80% and 78%). Their mROIs of 0.017 and 0.018 are solid, but l",
+          "status": "verified"
+        }
+      ]
+    },
+    "overall_valid": false
+  }
+}
