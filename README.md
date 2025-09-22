@@ -28,8 +28,14 @@ This is an AI-powered assistant that translates complex Marketing Mix Model (MMM
 ```bash
 # Test the AI
 python runner.py --mode ai --name "Google Ads" --question "What is the ROI?"
-# Get the best channel
+# Get the best channel by ROI 
 python runner.py --mode best
-![alt text](image-2.png)
+
+#Ask a natural-language AI question 
+python runner.py --mode ai --question "Add your question here "
+
+#if you want to restrict the question to a specific channel 
+python runner.py --model ai --question "Add your question here" --name google_ads
+
 
 

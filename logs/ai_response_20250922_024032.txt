@@ -1,0 +1,23 @@
+QUESTION: What is the contribution of Google Ads
+CHANNEL: google_ads
+TIME: 2025-09-22 02:40:32.440406
+
+=== AI RESPONSE ===
+**Answer:**
+Google Ads contributed 27% of the total Key Performance Indicator (KPI), which amounts to an incremental value of 125,000.
+
+**Explanation:**
+Google Ads is a significant driver of business results, generating 125,000 in KPI from a $90,000 spend, resulting in an overall Return on Investment (ROI) of 1.39. However, the channel is showing severe signs of saturation, meaning you have reached a point of diminishing returns. Its current marginal ROI (mROI) is extremely low at 0.018. This indicates that for every additional dollar you spend on Google Ads at this level, you are only getting about 2 cents back, making further investment highly inefficient. The response curve data confirms this, showing the channel is 78% saturated at its current spending level.
+
+**Recommendations:**
+*   **Reduce Spend:** Consider pulling back the budget for Google Ads. The data strongly suggests this channel is over-invested, and a budget reduction would likely improve overall marketing efficiency.
+*   **Reallocate Funds:** Shift the reduced budget from Google Ads to channels that have a higher marginal ROI to maximize your total returns.
+
+**Guardrails:**
+This analysis is based on an observed weekly spend for Google Ads between $60,000 and $120,000.
+
+**Source:**
+Model version meridian_2025_09_20, analyzing data from 2025-Q2.
+
+**Confidence:**
+High (based on a model R² of 0.84 and a MAPE of 0.13).
