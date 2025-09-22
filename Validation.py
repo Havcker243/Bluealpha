@@ -1,1 +1,1 @@
-"This is where the AI validation logic would live"
+"This is where the AI validation logic would live, here we would use a LLM to validate the outputs of the model and provide feedback on its accuracy and reliability."
