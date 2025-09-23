@@ -38,6 +38,7 @@ Example channel data:
   "adstock": {"decay": 0.55, "max_lag_weeks": 7},
   "hill": {"half_sat": 75000, "alpha": 1.1}
 }
+```
 
 ## 🏗️ Architecture 
 Core Components
@@ -73,9 +74,11 @@ python runner.py --mode ai --question "Add your question here "
 #if you want to restrict the question to a specific channel 
 python runner.py --model ai --question "Add your question here" --name "Google Ads"
 
-Future Enhancements 
+```
 
-Planned Features
+## Future Enhancements
+
+**Planned Features**
 Real-time data pipelines from Meridian model
 
 Advanced visualization integration
@@ -86,7 +89,7 @@ Scenario analysis tools
 
 Export functionality for reports
 
-Current Limitations
+**Current Limitations**
 Uses static JSON data (awaiting live model integration)
 
 Basic frontend interface
