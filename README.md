@@ -43,12 +43,12 @@ Example channel data:
 ## 🏗️ Architecture 
 Core Components
 📁 Project Structure:
-├── AI.py              # Main AI analyst class & Gemini integration
-├── Validation.py      # Response validation system  
-├── workflow.py        # Basic channel data operations
-├── app.py            # FastAPI REST server
-├── runner.py         # Command-line interface
-└── model_output.json # MMM data source
+1. AI.py              # Main AI analyst class & Gemini integration
+2. Validation.py      # Response validation system 
+3. workflow.py        # Basic channel data operations
+4. app.py            # FastAPI REST server
+5. runner.py         # Command-line interface
+6. model_output.json # MMM data source
 
 
 ## Installation & Setup
