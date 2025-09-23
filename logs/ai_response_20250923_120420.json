@@ -1,0 +1,266 @@
+{
+  "question": "Which were the top3 channels by contribution to revenue in q2 ",
+  "channel": null,
+  "timestamp": "2025-09-23T12:04:20.516203",
+  "response": "**Answer:**\nThe top three channels by contribution to revenue in Q2 were Facebook Ads (33%), Google Ads (27%), and YouTube (18%).\n\n**Explanation:**\nThese three channels were the primary drivers of revenue, collectively accounting for 78% of the total marketing contribution. Their top-ranking performance is a direct result of receiving the highest budget allocation combined with strong efficiency.\n\n*   **Facebook Ads** was the largest contributor at 33%, driven by the highest spend ($110,000) and a strong Return on Investment (ROI) of 1.45.\n*   **Google Ads** followed, contributing 27% with a spend of $90,000 and an ROI of 1.39.\n*   **YouTube** secured the third spot with an 18% contribution, backed by a $50,000 spend and a robust ROI of 1.40.\n\nWhile these channels are top performers, they are also approaching saturation (the point of diminishing returns). For instance, Facebook's saturation is at 80% and Google's is at 78%, meaning further investment will be less effective than previous spending.\n\n**Recommendations:**\n1.  **Maintain Investment in Top Performers:** Continue funding Facebook Ads and Google Ads at their current levels to protect their significant revenue contributions.\n2.  **Optimize for Marginal Growth:** Consider reallocating a portion of the YouTube budget to TikTok. While YouTube is a top contributor, its marginal ROI (mROI) of 0.014 is lower than TikTok's (0.019). This means the next dollar spent on TikTok is projected to generate more revenue than the next dollar spent on YouTube.\n\n**Guardrails:**\nThis analysis is based on the observed quarterly spend ranges for each channel:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **Google Ads:** $60,000 - $120,000\n*   **YouTube:** $30,000 - $90,000\n\n**Source:**\nModel version meridian_2025_09_20 for the period 2025-Q2.\n\n**Confidence:**\nHigh (The model's R-squared of 0.84 and MAPE of 0.13 indicate a strong and reliable fit to the data).",
+  "validation": {
+    "adaptive_validation": {
+      "specific_validation": false,
+      "reason": "Could not identify specific metric or channel",
+      "strategy": "specific_metric"
+    },
+    "general_validation": {
+      "total_claims": 40,
+      "verified": 28,
+      "unverified": 12,
+      "errors": [
+        {
+          "display_value": "33%",
+          "raw_number": 33.0,
+          "context": "r:**\nThe top three channels by contribution to revenue in Q2 were Facebook Ads (33%), Google Ads (27...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "27%",
+          "raw_number": 27.0,
+          "context": "channels by contribution to revenue in Q2 were Facebook Ads (33%), Google Ads (27%), and YouTube (18...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "18%",
+          "raw_number": 18.0,
+          "context": "bution to revenue in Q2 were Facebook Ads (33%), Google Ads (27%), and YouTube (18%).\n\n**Explanation...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "33",
+          "raw_number": 33.0,
+          "context": "r:**\nThe top three channels by contribution to revenue in Q2 were Facebook Ads (33%), Google Ads (27...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "27",
+          "raw_number": 27.0,
+          "context": "channels by contribution to revenue in Q2 were Facebook Ads (33%), Google Ads (27%), and YouTube (18...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "18",
+          "raw_number": 18.0,
+          "context": "bution to revenue in Q2 were Facebook Ads (33%), Google Ads (27%), and YouTube (18%).\n\n**Explanation...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "110",
+          "raw_number": 110.0,
+          "context": "acebook Ads** was the largest contributor at 33%, driven by the highest spend ($110,000) and a stron...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "000",
+          "raw_number": 0.0,
+          "context": "ook Ads** was the largest contributor at 33%, driven by the highest spend ($110,000) and a strong Re...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "90",
+          "raw_number": 90.0,
+          "context": "t (ROI) of 1.45.\n*   **Google Ads** followed, contributing 27% with a spend of $90,000 and an ROI of...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "150",
+          "raw_number": 150.0,
+          "context": "erved quarterly spend ranges for each channel:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **Google...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "60",
+          "raw_number": 60.0,
+          "context": "for each channel:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **Google Ads:** $60,000 - $120,000\n* ...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "120",
+          "raw_number": 120.0,
+          "context": "hannel:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **Google Ads:** $60,000 - $120,000\n*   **YouTub...",
+          "message": "Number not found in source data"
+        }
+      ],
+      "warnings": [],
+      "verified_claims": [
+        {
+          "display_value": "$110,000",
+          "raw_number": 110000.0,
+          "matched_source": 110000.0,
+          "context": "Facebook Ads** was the largest contributor at 33%, driven by the highest spend ($110,000) and a stro..."
+        },
+        {
+          "display_value": "$90,000",
+          "raw_number": 90000.0,
+          "matched_source": 90000.0,
+          "context": "nt (ROI) of 1.45.\n*   **Google Ads** followed, contributing 27% with a spend of $90,000 and an ROI o..."
+        },
+        {
+          "display_value": "$50,000",
+          "raw_number": 50000.0,
+          "matched_source": 50000.0,
+          "context": "9.\n*   **YouTube** secured the third spot with an 18% contribution, backed by a $50,000 spend and a ..."
+        },
+        {
+          "display_value": "$70,000",
+          "raw_number": 70000.0,
+          "matched_source": 70000.0,
+          "context": "on the observed quarterly spend ranges for each channel:\n*   **Facebook Ads:** $70,000 - $150,000\n* ..."
+        },
+        {
+          "display_value": "$150,000",
+          "raw_number": 150000.0,
+          "matched_source": 150000.0,
+          "context": "served quarterly spend ranges for each channel:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **Googl..."
+        },
+        {
+          "display_value": "$60,000",
+          "raw_number": 60000.0,
+          "matched_source": 60000.0,
+          "context": "for each channel:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **Google Ads:** $60,000 - $120,000\n* ..."
+        },
+        {
+          "display_value": "$120,000",
+          "raw_number": 120000.0,
+          "matched_source": 120000.0,
+          "context": "channel:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **Google Ads:** $60,000 - $120,000\n*   **YouTu..."
+        },
+        {
+          "display_value": "$30,000",
+          "raw_number": 30000.0,
+          "matched_source": 30000.0,
+          "context": "s:** $70,000 - $150,000\n*   **Google Ads:** $60,000 - $120,000\n*   **YouTube:** $30,000 - $90,000\n\n*..."
+        },
+        {
+          "display_value": "ROI of 1.39",
+          "raw_number": 1.39,
+          "matched_source": 1.39,
+          "context": "5.\n*   **Google Ads** followed, contributing 27% with a spend of $90,000 and an ROI of 1.39.\n*   **Y..."
+        },
+        {
+          "display_value": "ROI of 1.40",
+          "raw_number": 1.4,
+          "matched_source": 1.4,
+          "context": "the third spot with an 18% contribution, backed by a $50,000 spend and a robust ROI of 1.40.\n\nWhile ..."
+        },
+        {
+          "display_value": "78%",
+          "raw_number": 78.0,
+          "matched_source": 78.0,
+          "context": "three channels were the primary drivers of revenue, collectively accounting for 78% of the total mar..."
+        },
+        {
+          "display_value": "80%",
+          "raw_number": 80.0,
+          "matched_source": 80.0,
+          "context": "n (the point of diminishing returns). For instance, Facebook's saturation is at 80% and Google's is ..."
+        },
+        {
+          "display_value": "saturation (the point of diminishing returns). For instance, Facebook's saturation is at 80%",
+          "raw_number": 80.0,
+          "matched_source": 80.0,
+          "context": "OI of 1.40.\n\nWhile these channels are top performers, they are also approaching saturation (the poin..."
+        },
+        {
+          "display_value": "78",
+          "raw_number": 78.0,
+          "matched_source": 78.0,
+          "context": "three channels were the primary drivers of revenue, collectively accounting for 78% of the total mar..."
+        },
+        {
+          "display_value": "1.45",
+          "raw_number": 1.45,
+          "matched_source": 1.45,
+          "context": "iven by the highest spend ($110,000) and a strong Return on Investment (ROI) of 1.45.\n*   **Google A..."
+        },
+        {
+          "display_value": "1.39",
+          "raw_number": 1.39,
+          "matched_source": 1.39,
+          "context": "**Google Ads** followed, contributing 27% with a spend of $90,000 and an ROI of 1.39.\n*   **YouTube*..."
+        },
+        {
+          "display_value": "50",
+          "raw_number": 50.0,
+          "matched_source": 50.0,
+          "context": ".\n*   **YouTube** secured the third spot with an 18% contribution, backed by a $50,000 spend and a r..."
+        },
+        {
+          "display_value": "1.40",
+          "raw_number": 1.4,
+          "matched_source": 1.4,
+          "context": "rd spot with an 18% contribution, backed by a $50,000 spend and a robust ROI of 1.40.\n\nWhile these c..."
+        },
+        {
+          "display_value": "80",
+          "raw_number": 80.0,
+          "matched_source": 80.0,
+          "context": "n (the point of diminishing returns). For instance, Facebook's saturation is at 80% and Google's is ..."
+        },
+        {
+          "display_value": "0.014",
+          "raw_number": 0.014,
+          "matched_source": 0.015,
+          "context": "udget to TikTok. While YouTube is a top contributor, its marginal ROI (mROI) of 0.014 is lower than ..."
+        },
+        {
+          "display_value": "0.019",
+          "raw_number": 0.019,
+          "matched_source": 0.019,
+          "context": "is a top contributor, its marginal ROI (mROI) of 0.014 is lower than TikTok's (0.019). This means th..."
+        },
+        {
+          "display_value": "70",
+          "raw_number": 70.0,
+          "matched_source": 70.0,
+          "context": "on the observed quarterly spend ranges for each channel:\n*   **Facebook Ads:** $70,000 - $150,000\n* ..."
+        },
+        {
+          "display_value": "30",
+          "raw_number": 30.0,
+          "matched_source": 30.0,
+          "context": ":** $70,000 - $150,000\n*   **Google Ads:** $60,000 - $120,000\n*   **YouTube:** $30,000 - $90,000\n\n**..."
+        },
+        {
+          "display_value": "2025",
+          "raw_number": 2025.0,
+          "matched_source": 2025.0,
+          "context": "$120,000\n*   **YouTube:** $30,000 - $90,000\n\n**Source:**\nModel version meridian_2025_09_20 for the p..."
+        },
+        {
+          "display_value": "09",
+          "raw_number": 9.0,
+          "matched_source": 9.0,
+          "context": "000\n*   **YouTube:** $30,000 - $90,000\n\n**Source:**\nModel version meridian_2025_09_20 for the period..."
+        },
+        {
+          "display_value": "20",
+          "raw_number": 20.0,
+          "matched_source": 20.0,
+          "context": "*   **YouTube:** $30,000 - $90,000\n\n**Source:**\nModel version meridian_2025_09_20 for the period 202..."
+        },
+        {
+          "display_value": "0.84",
+          "raw_number": 0.84,
+          "matched_source": 0.84,
+          "context": "5_09_20 for the period 2025-Q2.\n\n**Confidence:**\nHigh (The model's R-squared of 0.84 and MAPE of 0.1..."
+        },
+        {
+          "display_value": "0.13",
+          "raw_number": 0.13,
+          "matched_source": 0.13,
+          "context": "eriod 2025-Q2.\n\n**Confidence:**\nHigh (The model's R-squared of 0.84 and MAPE of 0.13 indicate a stro..."
+        }
+      ],
+      "success_rate": 0.7,
+      "valid": false
+    },
+    "overall_valid": false
+  }
+}

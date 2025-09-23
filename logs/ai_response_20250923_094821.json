@@ -1,0 +1,156 @@
+{
+  "question": "What is my lowest stock and what is the best way to improve it ",
+  "channel": null,
+  "timestamp": "2025-09-23T09:48:21.673422",
+  "response": "**Answer:**\nPinterest has the lowest adstock, meaning the impact of your advertising on this channel fades the fastest.\n\n**Explanation:**\nAdstock measures the carryover effect of your ads—how long their impact lingers after the initial exposure. Pinterest has an adstock decay of 0.44 and a maximum effect duration of 4 weeks. This is the lowest of all your channels, indicating its impact is very short-term. For comparison, TikTok has the highest adstock decay (0.62) and a 9-week duration, meaning its advertising impact is more prolonged. This suggests that while Pinterest might be useful for immediate, in-the-moment conversions, it is less effective at building lasting brand recall. Compounding this issue, Pinterest also has the lowest overall ROI at 1.1 and a very low marginal ROI (mROI) of 0.009, indicating that additional investment is currently inefficient.\n\n**Recommendations:**\n1.  **Adapt Your Strategy for Pinterest:** Since you cannot directly change a channel's adstock, adapt your creative strategy to align with its short-term nature. Focus on campaigns that drive immediate action, such as limited-time promotions or direct \"shop now\" calls-to-action.\n2.  **Reallocate Budget for Higher Returns:** Given Pinterest's low efficiency (ROI 1.1, mROI 0.009), consider reallocating its budget to a channel with a higher potential for growth. TikTok currently has a much higher marginal ROI of 0.019, meaning every dollar shifted from Pinterest to TikTok could generate more than double the incremental return at current spending levels.\n\n**Guardrails:**\nThis analysis is based on an observed weekly spend for Pinterest between $10,000 and $40,000. The recommendation for TikTok is based on its observed weekly spend range of $20,000 to $70,000.\n\n**Source:**\nModel version meridian_2025_09_20, analyzing data for 2025-Q2.\n\n**Confidence:**\nHigh (Model R²: 0.84, MAPE: 0.13).",
+  "validation": {
+    "adaptive_validation": {
+      "validation_type": "ranking",
+      "metric": "roi",
+      "ai_mentioned_channels": [],
+      "true_top_5_channels": [],
+      "overlap_count": 0,
+      "is_plausible": false,
+      "strategy": "ranking"
+    },
+    "general_validation": {
+      "total_claims": 21,
+      "verified": 19,
+      "unverified": 2,
+      "errors": [
+        {
+          "display_value": "10",
+          "raw_number": 10.0,
+          "context": "ls:**\nThis analysis is based on an observed weekly spend for Pinterest between $10,000 and $40,000. ...",
+          "message": "Number not found in source data"
+        },
+        {
+          "display_value": "000",
+          "raw_number": 0.0,
+          "context": "**\nThis analysis is based on an observed weekly spend for Pinterest between $10,000 and $40,000. The...",
+          "message": "Number not found in source data"
+        }
+      ],
+      "warnings": [],
+      "verified_claims": [
+        {
+          "display_value": "ROI at 1.1",
+          "raw_number": 1.1,
+          "matched_source": 1.1,
+          "context": "ing brand recall. Compounding this issue, Pinterest also has the lowest overall ROI at 1.1 and a ver..."
+        },
+        {
+          "display_value": "mROI 0.009",
+          "raw_number": 0.009,
+          "matched_source": 0.008,
+          "context": "llocate Budget for Higher Returns:** Given Pinterest's low efficiency (ROI 1.1, mROI 0.009), conside..."
+        },
+        {
+          "display_value": "ROI of 0.019",
+          "raw_number": 0.019,
+          "matched_source": 0.019,
+          "context": "with a higher potential for growth. TikTok currently has a much higher marginal ROI of 0.019, meanin..."
+        },
+        {
+          "display_value": "$10,000",
+          "raw_number": 10000.0,
+          "matched_source": 10000.0,
+          "context": "ils:**\nThis analysis is based on an observed weekly spend for Pinterest between $10,000 and $40,000...."
+        },
+        {
+          "display_value": "$40,000",
+          "raw_number": 40000.0,
+          "matched_source": 40000.0,
+          "context": "analysis is based on an observed weekly spend for Pinterest between $10,000 and $40,000. The recomme..."
+        },
+        {
+          "display_value": "$20,000",
+          "raw_number": 20000.0,
+          "matched_source": 20000.0,
+          "context": "0. The recommendation for TikTok is based on its observed weekly spend range of $20,000 to $70,000.\n..."
+        },
+        {
+          "display_value": "$70,000",
+          "raw_number": 70000.0,
+          "matched_source": 70000.0,
+          "context": "mmendation for TikTok is based on its observed weekly spend range of $20,000 to $70,000.\n\n**Source:*..."
+        },
+        {
+          "display_value": "0.44",
+          "raw_number": 0.44,
+          "matched_source": 0.44,
+          "context": "ir impact lingers after the initial exposure. Pinterest has an adstock decay of 0.44 and a maximum e..."
+        },
+        {
+          "display_value": "0.62",
+          "raw_number": 0.62,
+          "matched_source": 0.62,
+          "context": "mpact is very short-term. For comparison, TikTok has the highest adstock decay (0.62) and a 9-week d..."
+        },
+        {
+          "display_value": "1.1",
+          "raw_number": 1.1,
+          "matched_source": 1.1,
+          "context": "nd recall. Compounding this issue, Pinterest also has the lowest overall ROI at 1.1 and a very low m..."
+        },
+        {
+          "display_value": "0.009",
+          "raw_number": 0.009,
+          "matched_source": 0.008,
+          "context": "st also has the lowest overall ROI at 1.1 and a very low marginal ROI (mROI) of 0.009, indicating th..."
+        },
+        {
+          "display_value": "0.019",
+          "raw_number": 0.019,
+          "matched_source": 0.019,
+          "context": "higher potential for growth. TikTok currently has a much higher marginal ROI of 0.019, meaning every..."
+        },
+        {
+          "display_value": "40",
+          "raw_number": 40.0,
+          "matched_source": 40.0,
+          "context": "nalysis is based on an observed weekly spend for Pinterest between $10,000 and $40,000. The recommen..."
+        },
+        {
+          "display_value": "20",
+          "raw_number": 20.0,
+          "matched_source": 20.0,
+          "context": ". The recommendation for TikTok is based on its observed weekly spend range of $20,000 to $70,000.\n\n..."
+        },
+        {
+          "display_value": "70",
+          "raw_number": 70.0,
+          "matched_source": 70.0,
+          "context": "mendation for TikTok is based on its observed weekly spend range of $20,000 to $70,000.\n\n**Source:**..."
+        },
+        {
+          "display_value": "2025",
+          "raw_number": 2025.0,
+          "matched_source": 2025.0,
+          "context": "d weekly spend range of $20,000 to $70,000.\n\n**Source:**\nModel version meridian_2025_09_20, analyzin..."
+        },
+        {
+          "display_value": "09",
+          "raw_number": 9.0,
+          "matched_source": 9.0,
+          "context": "kly spend range of $20,000 to $70,000.\n\n**Source:**\nModel version meridian_2025_09_20, analyzing dat..."
+        },
+        {
+          "display_value": "0.84",
+          "raw_number": 0.84,
+          "matched_source": 0.84,
+          "context": "ridian_2025_09_20, analyzing data for 2025-Q2.\n\n**Confidence:**\nHigh (Model R²: 0.84, MAPE: 0.13)."
+        },
+        {
+          "display_value": "0.13",
+          "raw_number": 0.13,
+          "matched_source": 0.13,
+          "context": "09_20, analyzing data for 2025-Q2.\n\n**Confidence:**\nHigh (Model R²: 0.84, MAPE: 0.13)."
+        }
+      ],
+      "success_rate": 0.9047619047619048,
+      "valid": true
+    },
+    "overall_valid": true
+  }
+}

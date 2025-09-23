@@ -1,0 +1,356 @@
+{
+  "question": "Analyze the complete marketing performance across all channels. Compare the top and bottom performers by ROI, contribution percentage, and marginal ROI. Include specific spend ranges, saturation levels, adstock decay rates, and explain which channels are most efficient for budget reallocation. Provide exact numbers for Facebook, TikTok, and Pinterest including their current spend, ROI, mROI, contribution percentages, and optimal spend recommendations.",
+  "channel": null,
+  "timestamp": "2025-09-23T13:16:29.343284",
+  "response": "Of course. Here is a complete analysis of your marketing performance based on the provided data.\n\n**Answer:**\nFacebook Ads is your top-performing channel in terms of overall return and contribution, while TikTok offers the best efficiency for additional investment; conversely, Pinterest and Snapchat are the weakest performers and are prime candidates for budget reduction.\n\n**Explanation:**\nYour marketing efforts are led by **Facebook Ads**, which is the largest contributor to your KPI at 33% with the highest overall ROI of 1.45. Following closely are **Google Ads** (27% contribution, 1.39 ROI) and **YouTube** (18% contribution, 1.40 ROI). These three channels are your foundational pillars but are also showing signs of saturation, meaning the returns from spending more on them are diminishing.\n\nThe key to optimizing your budget lies in comparing the marginal ROI (mROI), which tells you the return on your *next* dollar spent.\n\n*   **Top Performer (Efficiency):** **TikTok** stands out with the highest mROI of 0.019. Despite having a lower overall ROI (1.25), it is the most efficient channel for incremental spending. It is moderately saturated (65%), meaning there is still significant room for growth. Additionally, its adstock decay of 0.62 is high, indicating that its marketing impact persists for a longer duration (up to 9 weeks).\n\n*   **Bottom Performers (Efficiency):** **Pinterest** is the most inefficient channel with the lowest mROI of 0.009, meaning every extra dollar spent returns less than a cent. Its overall ROI is also among the lowest at 1.1. **Snapchat** follows with an mROI of 0.01 and the lowest overall ROI of 1.12. Both channels are inefficient at their current spending levels and are clear sources for budget reallocation.\n\n**Detailed Channel Breakdown: Facebook vs. TikTok vs. Pinterest**\n\n| Metric | Facebook Ads | TikTok | Pinterest |\n| :--- | :--- | :--- | :--- |\n| **Current Spend** | $110,000 | $40,000 | $20,000 |\n| **ROI** | 1.45 (Top Performer) | 1.25 (Mid-tier) | 1.10 (Bottom Performer) |\n| **mROI** | 0.017 (Average) | 0.019 (Highest) | 0.009 (Lowest) |\n| **Contribution %** | 33% | 12% | 7% |\n| **Saturation %** | 80% (High) | 65% (Moderate) | 50% (Low) |\n\nThis comparison highlights that while Facebook is your historical best performer, TikTok is where future investment will be most effective. Pinterest is significantly underperforming across all efficiency metrics.\n\n**Recommendations:**\n1.  **Reallocate Budget for Growth:** Shift budget from your least efficient channels to your most efficient one. Specifically, reduce spend on **Pinterest (mROI: 0.009)** and **Snapchat (mROI: 0.01)** and reallocate those funds to **TikTok (mROI: 0.019)** to maximize returns on your next dollar.\n2.  **Optimize High-Spend Channels:** Maintain current spend levels for **Facebook Ads** and **Google Ads**. While they are strong contributors, their high saturation (80% and 78%, respectively) and lower mROIs mean that increasing their budgets further would be inefficient.\n3.  **Monitor Mid-Tier Channels:** Channels like **YouTube** and **LinkedIn** have moderate mROIs. Keep their budgets stable but monitor them as potential areas for future investment if TikTok becomes saturated.\n\n**Guardrails:**\nThis analysis and its recommendations are based on the observed weekly spend ranges within the model. Performance may differ outside these ranges:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Snapchat:** $10,000 - $50,000\n\n**Source:**\nModel version meridian_2025_09_20, analyzing data from 2025-Q2.\n\n**Confidence:**\nHigh. The model diagnostics are strong, with an R² of 0.84 (indicating the model explains 84% of the variance in the data) and a MAPE of 0.13 (indicating an average forecast error of 13%).",
+  "validation": {
+    "adaptive_validation": {
+      "specific_validation": false,
+      "reason": "Could not identify specific metric or channel",
+      "strategy": "specific_metric"
+    },
+    "general_validation": {
+      "total_claims": 55,
+      "verified": 54,
+      "unverified": 1,
+      "errors": [
+        {
+          "display_value": "000",
+          "raw_number": 0.0,
+          "context": "| TikTok | Pinterest |\n| :--- | :--- | :--- | :--- |\n| **Current Spend** | $110,000 | $40,000 | $20,...",
+          "message": "Number not found in source data"
+        }
+      ],
+      "warnings": [],
+      "verified_claims": [
+        {
+          "display_value": "$110,000",
+          "raw_number": 110000.0,
+          "matched_source": 110000.0,
+          "context": "Ads | TikTok | Pinterest |\n| :--- | :--- | :--- | :--- |\n| **Current Spend** | $110,000 | $40,000 | ..."
+        },
+        {
+          "display_value": "$40,000",
+          "raw_number": 40000.0,
+          "matched_source": 40000.0,
+          "context": "ok | Pinterest |\n| :--- | :--- | :--- | :--- |\n| **Current Spend** | $110,000 | $40,000 | $20,000 |\n..."
+        },
+        {
+          "display_value": "$20,000",
+          "raw_number": 20000.0,
+          "matched_source": 20000.0,
+          "context": "rest |\n| :--- | :--- | :--- | :--- |\n| **Current Spend** | $110,000 | $40,000 | $20,000 |\n| **ROI** ..."
+        },
+        {
+          "display_value": "$70,000",
+          "raw_number": 70000.0,
+          "matched_source": 70000.0,
+          "context": "n the model. Performance may differ outside these ranges:\n*   **Facebook Ads:** $70,000 - $150,000\n*..."
+        },
+        {
+          "display_value": "$150,000",
+          "raw_number": 150000.0,
+          "matched_source": 150000.0,
+          "context": "l. Performance may differ outside these ranges:\n*   **Facebook Ads:** $70,000 - $150,000\n*   **TikTo..."
+        },
+        {
+          "display_value": "$10,000",
+          "raw_number": 10000.0,
+          "matched_source": 10000.0,
+          "context": "Ads:** $70,000 - $150,000\n*   **TikTok:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*  ..."
+        },
+        {
+          "display_value": "$60,000",
+          "raw_number": 60000.0,
+          "matched_source": 60000.0,
+          "context": "k:** $20,000 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Google Ads:** $60,000 - $120,000\n*..."
+        },
+        {
+          "display_value": "$120,000",
+          "raw_number": 120000.0,
+          "matched_source": 120000.0,
+          "context": "00 - $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Snapc..."
+        },
+        {
+          "display_value": "$50,000",
+          "raw_number": 50000.0,
+          "matched_source": 50000.0,
+          "context": "00 - $40,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Snapchat:** $10,000 - $50,000\n\n**Source:**..."
+        },
+        {
+          "display_value": "ROI of 1.45",
+          "raw_number": 1.45,
+          "matched_source": 1.45,
+          "context": "*, which is the largest contributor to your KPI at 33% with the highest overall ROI of 1.45. Followi..."
+        },
+        {
+          "display_value": "mROI of 0.019",
+          "raw_number": 0.019,
+          "matched_source": 0.019,
+          "context": "nt.\n\n*   **Top Performer (Efficiency):** **TikTok** stands out with the highest mROI of 0.019. Despi..."
+        },
+        {
+          "display_value": "mROI of 0.009",
+          "raw_number": 0.009,
+          "matched_source": 0.008,
+          "context": "s (Efficiency):** **Pinterest** is the most inefficient channel with the lowest mROI of 0.009, meani..."
+        },
+        {
+          "display_value": "mROI of 0.01",
+          "raw_number": 0.01,
+          "matched_source": 0.01,
+          "context": ". Its overall ROI is also among the lowest at 1.1. **Snapchat** follows with an mROI of 0.01 and the..."
+        },
+        {
+          "display_value": "ROI of 1.12",
+          "raw_number": 1.12,
+          "matched_source": 1.12,
+          "context": "lowest at 1.1. **Snapchat** follows with an mROI of 0.01 and the lowest overall ROI of 1.12. Both ch..."
+        },
+        {
+          "display_value": "33%",
+          "raw_number": 33.0,
+          "matched_source": 33.0,
+          "context": "ts are led by **Facebook Ads**, which is the largest contributor to your KPI at 33% with the highest..."
+        },
+        {
+          "display_value": "27%",
+          "raw_number": 27.0,
+          "matched_source": 27.0,
+          "context": "33% with the highest overall ROI of 1.45. Following closely are **Google Ads** (27% contribution, 1...."
+        },
+        {
+          "display_value": "18%",
+          "raw_number": 18.0,
+          "matched_source": 18.0,
+          "context": "lowing closely are **Google Ads** (27% contribution, 1.39 ROI) and **YouTube** (18% contribution, 1...."
+        },
+        {
+          "display_value": "65%",
+          "raw_number": 65.0,
+          "matched_source": 65.0,
+          "context": "he most efficient channel for incremental spending. It is moderately saturated (65%), meaning there ..."
+        },
+        {
+          "display_value": "12%",
+          "raw_number": 12.0,
+          "matched_source": 12.0,
+          "context": "017 (Average) | 0.019 (Highest) | 0.009 (Lowest) |\n| **Contribution %** | 33% | 12% | 7% |\n| **Satur..."
+        },
+        {
+          "display_value": "7%",
+          "raw_number": 7.0,
+          "matched_source": 7.0,
+          "context": "verage) | 0.019 (Highest) | 0.009 (Lowest) |\n| **Contribution %** | 33% | 12% | 7% |\n| **Saturation ..."
+        },
+        {
+          "display_value": "80%",
+          "raw_number": 80.0,
+          "matched_source": 80.0,
+          "context": "| 0.009 (Lowest) |\n| **Contribution %** | 33% | 12% | 7% |\n| **Saturation %** | 80% (High) | 65% (Mo..."
+        },
+        {
+          "display_value": "50%",
+          "raw_number": 50.0,
+          "matched_source": 50.0,
+          "context": "ution %** | 33% | 12% | 7% |\n| **Saturation %** | 80% (High) | 65% (Moderate) | 50% (Low) |\n\nThis co..."
+        },
+        {
+          "display_value": "78%",
+          "raw_number": 78.0,
+          "matched_source": 78.0,
+          "context": "oogle Ads**. While they are strong contributors, their high saturation (80% and 78%, respectively) a..."
+        },
+        {
+          "display_value": "84%",
+          "raw_number": 84.0,
+          "matched_source": 84.0,
+          "context": "model diagnostics are strong, with an R² of 0.84 (indicating the model explains 84% of the variance ..."
+        },
+        {
+          "display_value": "13%",
+          "raw_number": 13.0,
+          "matched_source": 13.0,
+          "context": "riance in the data) and a MAPE of 0.13 (indicating an average forecast error of 13%)."
+        },
+        {
+          "display_value": "saturated (65%",
+          "raw_number": 65.0,
+          "matched_source": 65.0,
+          "context": "5), it is the most efficient channel for incremental spending. It is moderately saturated (65%), mea..."
+        },
+        {
+          "display_value": "Saturation %** | 80%",
+          "raw_number": 80.0,
+          "matched_source": 80.0,
+          "context": "0.019 (Highest) | 0.009 (Lowest) |\n| **Contribution %** | 33% | 12% | 7% |\n| **Saturation %** | 80% ..."
+        },
+        {
+          "display_value": "33",
+          "raw_number": 33.0,
+          "matched_source": 33.0,
+          "context": "ts are led by **Facebook Ads**, which is the largest contributor to your KPI at 33% with the highest..."
+        },
+        {
+          "display_value": "1.45",
+          "raw_number": 1.45,
+          "matched_source": 1.45,
+          "context": "h is the largest contributor to your KPI at 33% with the highest overall ROI of 1.45. Following clos..."
+        },
+        {
+          "display_value": "27",
+          "raw_number": 27.0,
+          "matched_source": 27.0,
+          "context": "33% with the highest overall ROI of 1.45. Following closely are **Google Ads** (27% contribution, 1...."
+        },
+        {
+          "display_value": "1.39",
+          "raw_number": 1.39,
+          "matched_source": 1.39,
+          "context": "st overall ROI of 1.45. Following closely are **Google Ads** (27% contribution, 1.39 ROI) and **YouT..."
+        },
+        {
+          "display_value": "18",
+          "raw_number": 18.0,
+          "matched_source": 18.0,
+          "context": "lowing closely are **Google Ads** (27% contribution, 1.39 ROI) and **YouTube** (18% contribution, 1...."
+        },
+        {
+          "display_value": "1.40",
+          "raw_number": 1.4,
+          "matched_source": 1.4,
+          "context": "**Google Ads** (27% contribution, 1.39 ROI) and **YouTube** (18% contribution, 1.40 ROI). These thre..."
+        },
+        {
+          "display_value": "0.019",
+          "raw_number": 0.019,
+          "matched_source": 0.019,
+          "context": "**Top Performer (Efficiency):** **TikTok** stands out with the highest mROI of 0.019. Despite having..."
+        },
+        {
+          "display_value": "1.25",
+          "raw_number": 1.25,
+          "matched_source": 1.25,
+          "context": "stands out with the highest mROI of 0.019. Despite having a lower overall ROI (1.25), it is the most..."
+        },
+        {
+          "display_value": "65",
+          "raw_number": 65.0,
+          "matched_source": 65.0,
+          "context": "he most efficient channel for incremental spending. It is moderately saturated (65%), meaning there ..."
+        },
+        {
+          "display_value": "0.62",
+          "raw_number": 0.62,
+          "matched_source": 0.62,
+          "context": "there is still significant room for growth. Additionally, its adstock decay of 0.62 is high, indicat..."
+        },
+        {
+          "display_value": "0.009",
+          "raw_number": 0.009,
+          "matched_source": 0.008,
+          "context": "iency):** **Pinterest** is the most inefficient channel with the lowest mROI of 0.009, meaning every..."
+        },
+        {
+          "display_value": "1.1",
+          "raw_number": 1.1,
+          "matched_source": 1.1,
+          "context": "lar spent returns less than a cent. Its overall ROI is also among the lowest at 1.1. **Snapchat** fo..."
+        },
+        {
+          "display_value": "0.01",
+          "raw_number": 0.01,
+          "matched_source": 0.01,
+          "context": "erall ROI is also among the lowest at 1.1. **Snapchat** follows with an mROI of 0.01 and the lowest ..."
+        },
+        {
+          "display_value": "1.12",
+          "raw_number": 1.12,
+          "matched_source": 1.12,
+          "context": "at 1.1. **Snapchat** follows with an mROI of 0.01 and the lowest overall ROI of 1.12. Both channels ..."
+        },
+        {
+          "display_value": "10",
+          "raw_number": 10.0,
+          "matched_source": 10.0,
+          "context": "ds | TikTok | Pinterest |\n| :--- | :--- | :--- | :--- |\n| **Current Spend** | $110,000 | $40,000 | $..."
+        },
+        {
+          "display_value": "0.017",
+          "raw_number": 0.017,
+          "matched_source": 0.018,
+          "context": "1.45 (Top Performer) | 1.25 (Mid-tier) | 1.10 (Bottom Performer) |\n| **mROI** | 0.017 (Average) | 0...."
+        },
+        {
+          "display_value": "12",
+          "raw_number": 12.0,
+          "matched_source": 12.0,
+          "context": "017 (Average) | 0.019 (Highest) | 0.009 (Lowest) |\n| **Contribution %** | 33% | 12% | 7% |\n| **Satur..."
+        },
+        {
+          "display_value": "80",
+          "raw_number": 80.0,
+          "matched_source": 80.0,
+          "context": "| 0.009 (Lowest) |\n| **Contribution %** | 33% | 12% | 7% |\n| **Saturation %** | 80% (High) | 65% (Mo..."
+        },
+        {
+          "display_value": "50",
+          "raw_number": 50.0,
+          "matched_source": 50.0,
+          "context": "ution %** | 33% | 12% | 7% |\n| **Saturation %** | 80% (High) | 65% (Moderate) | 50% (Low) |\n\nThis co..."
+        },
+        {
+          "display_value": "78",
+          "raw_number": 78.0,
+          "matched_source": 78.0,
+          "context": "oogle Ads**. While they are strong contributors, their high saturation (80% and 78%, respectively) a..."
+        },
+        {
+          "display_value": "20",
+          "raw_number": 20.0,
+          "matched_source": 20.0,
+          "context": "- $70,000\n*   **Pinterest:** $10,000 - $40,000\n*   **Google Ads:** $60,000 - $120,000\n*   **Snapchat..."
+        },
+        {
+          "display_value": "2025",
+          "raw_number": 2025.0,
+          "matched_source": 2025.0,
+          "context": "120,000\n*   **Snapchat:** $10,000 - $50,000\n\n**Source:**\nModel version meridian_2025_09_20, analyzin..."
+        },
+        {
+          "display_value": "09",
+          "raw_number": 9.0,
+          "matched_source": 9.0,
+          "context": "00\n*   **Snapchat:** $10,000 - $50,000\n\n**Source:**\nModel version meridian_2025_09_20, analyzing dat..."
+        },
+        {
+          "display_value": "0.84",
+          "raw_number": 0.84,
+          "matched_source": 0.84,
+          "context": "2025-Q2.\n\n**Confidence:**\nHigh. The model diagnostics are strong, with an R² of 0.84 (indicating the..."
+        },
+        {
+          "display_value": "84",
+          "raw_number": 84.0,
+          "matched_source": 84.0,
+          "context": "model diagnostics are strong, with an R² of 0.84 (indicating the model explains 84% of the variance ..."
+        },
+        {
+          "display_value": "0.13",
+          "raw_number": 0.13,
+          "matched_source": 0.13,
+          "context": "4 (indicating the model explains 84% of the variance in the data) and a MAPE of 0.13 (indicating an ..."
+        },
+        {
+          "display_value": "13",
+          "raw_number": 13.0,
+          "matched_source": 13.0,
+          "context": "riance in the data) and a MAPE of 0.13 (indicating an average forecast error of 13%)."
+        }
+      ],
+      "success_rate": 0.9818181818181818,
+      "valid": true
+    },
+    "overall_valid": true
+  }
+}

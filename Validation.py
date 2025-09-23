@@ -15,76 +15,181 @@ class ResponseValidator:
             "revenue": r"\b(revenue|incremental revenue|value)\b"
         }
 
-    def extract_numerical_claims(self, text: str) -> List[Tuple[str, str]]:
+    def extract_numerical_claims(self, text: str) -> List[Dict[str, Any]]:
         """
         Extracts numerical claims from text that can be validated.
         Returns a list of tuples: (extracted_value, context)
         """
         # Pattern to find numbers, percentages, and monetary values
         patterns = [
-            r'(\$?\d+\.?\d*\%?)',  # Basic numbers, percentages, and currencies
-            r'(\d+\.?\d*\s*%)',    # Percentage with space
-            r'(ROI.*?\d+\.?\d*)',  # ROI claims
-            r'(contribution.*?\d+\.?\d*\s*%)',  # Contribution percentages
-        ]
+            # Currency patterns (handle commas)
+            (r'\$([0-9,]+(?:\.[0-9]{2})?)', 'currency'),
+
+            (r'(m?ROI)\s*(?:of|at|:|is)?\s*\*?\*?(\d+\.?\d*)\*?\*?', 'roi_metric'),
+            
+            # Percentage patterns
+            (r'(\d+\.?\d*)\s*%', 'percentage'),
+            
+            # Saturation/performance metrics
+            (r'(saturation|saturated).*?(\d+\.?\d*)\s*%', 'saturation'),
+            
+            # Basic numbers (but avoid list markers)
+            (r'(?<!\$)(\d+\.?\d+)', 'number')
+            ]
+        
+        proccessed_num = set()
         
         claims = []
-        for pattern in patterns:
-            matches = re.finditer(pattern, text, re.IGNORECASE)
+        for pattern, claim_type in patterns:
+            matches = re.finditer(pattern, text, re.IGNORECASE|re.MULTILINE)
             for match in matches:
-                # Get some context around the number (10 words before and after)
-                match_index = text.find(match.group())
-                if match_index != -1:
-                    # Simple context extraction
-                    start_pos = max(0, match_index - 50)
-                    end_pos = min(len(text), match_index + len(match.group()) + 50)
-                    context = text[start_pos:end_pos]
-                    claims.append((match.group(), context))
-        
+
+                if len(match.groups()) >=2:
+                    number_str = match.group(2)
+                    prefix = match.group(1)
+                elif len(match.groups()) == 1:
+                    number_str = match.group(1)
+                    prefix = ""
+                else:
+                    continue
+                
+                if self._is_list_number(number_str, text, match.start()):
+                    continue  
+
+                try:
+                    clean_number = number_str.replace(',', '').replace('$', '')
+                    raw_number = float(clean_number)
+
+                    number_key = (raw_number, claim_type)
+                    if number_key in proccessed_num:
+                        continue
+                    proccessed_num.add(number_key)
+
+                except ValueError:
+                    continue
+
+                # Get context around the match
+                start_pos = max(0, match.start() - 80)
+                end_pos = min(len(text), match.end() + 80)
+                context = text[start_pos:end_pos].strip()
+
+                claims.append({
+                    'display_value': match.group(0),  # Full matched text for display
+                    'raw_number': raw_number,         # Clean number for validation
+                    'context': context,
+                    'claim_type': claim_type,
+                    'prefix': prefix,
+                    'position': match.start()
+                })
+    
         return claims
     
-    def validate_claims(self, claims: List[Tuple[str, str]], source_data: Dict[str, Any]) -> Dict[str, Any]:
+    def _is_list_marker(self, number_str: str, full_text: str, position: int) -> bool:
         """
-        Validates extracted claims against the source data.
+        Better detection of list markers like "1.", "2.", "3."
+        """
+        # Check if it's a single digit followed by period and space/newline
+        if len(number_str) == 1 and number_str.isdigit():
+            # Look at what comes right after this number in the full text
+            end_pos = position + len(number_str)
+            if end_pos < len(full_text):
+                next_chars = full_text[end_pos:end_pos + 10]
+                # List markers are usually followed by ". " or ".\n" then text
+                if re.match(r'^\.\s+[A-Z]', next_chars):
+                    return True
+        return False
+    
+    def _is_list_number(self, number_str: str, full_text: str, position: int) -> bool:
+        """
+        Fixed version that matches your calling pattern
+        """
+        return self._is_list_marker(number_str, full_text, position)
+    
+    def validate_claims(self, claims: List[Dict], source_data: Dict) -> Dict[str, Any]:
+        """
+        Improved validation that handles the cleaned numbers
         """
         validation_results = {
-            "valid": True,
+            "total_claims": len(claims),
+            "verified": 0,
+            "unverified": 0,
             "errors": [],
             "warnings": [],
             "verified_claims": []
         }
 
         # Convert the entire source data to string for pattern matching
-        source_str = json.dumps(source_data)
-        
-        for value, context in claims:
-            # Clean the extracted value for comparison
-            clean_value = value.replace(' ', '').replace('%', '').replace('$', '')
-            # Check if this exact value exists in source data
-            if clean_value in source_str:
-                validation_results["verified_claims"].append({
-                    "value": value,
-                    "context": context,
-                    "status": "verified"
+        source_numbers = self._extract_source_numbers(source_data)
+
+        for claim in claims:
+            raw_number = claim["raw_number"]
+
+            found_match = False 
+            for source_num in source_numbers:
+                if abs(raw_number - source_num) < 0.001:
+                    validation_results["verified"] += 1
+                    validation_results["verified_claims"].append({
+                        "display_value": claim['display_value'],
+                        "raw_number": raw_number,
+                        "matched_source": source_num,
+                        "context": claim['context'][:100] + "..." if len(claim['context']) > 100 else claim['context']
+                    })
+                    found_match = True
+                    break
+            if not found_match:
+                validation_results["unverified"] += 1
+                validation_results["errors"].append({
+                    "display_value": claim['display_value'],
+                    "raw_number": raw_number,
+                    "context": claim['context'][:100] + "..." if len(claim['context']) > 100 else claim['context'],
+                    "message" :"Number not found in source data"
                 })
-            else:
-                # Check if it's a percentage that might be calculated
-                if '%' in value and clean_value.replace('.', '').isdigit():
-                    # This might be a calculated percentage, not a direct error
-                    validation_results["warnings"].append({
-                        "value": value,
-                        "context": context,
-                        "message": "Percentage not directly found in source - may be calculated"
-                    })
-                else:
-                    validation_results["errors"].append({
-                        "value": value,
-                        "context": context,
-                        "message": "Value not found in source data"
-                    })
-                    validation_results["valid"] = False
-        
+
+        if validation_results["total_claims"] > 0:
+            validation_results["success_rate"] = validation_results["verified"] / validation_results["total_claims"]
+        else:
+            validation_results["success_rate"] = 0.0
+
+        validation_results["valid"] = validation_results["success_rate"] > 0.7
         return validation_results
+    
+    def _extract_source_numbers(self, source_data: Dict) -> List[float]:
+        """
+        Extract all numerical values from source data for comparison
+        """
+        numbers = []
+        
+        def extract_recursive(obj):
+            if isinstance(obj, dict):
+                for value in obj.values():
+                    extract_recursive(value)
+            elif isinstance(obj, list):
+                for item in obj:
+                    extract_recursive(item)
+            elif isinstance(obj, (int, float)):
+                numbers.append(float(obj))
+                if 0< obj < 1:
+                    numbers.append(round(obj * 100, 2)) 
+            elif isinstance(obj, str):
+                # Try to extract numbers from strings too
+                string_numbers = re.findall(r'\d+\.?\d*', obj)
+                for num_str in string_numbers:
+                    try:
+                        numbers.append(float(num_str))
+                    except ValueError:
+                        pass
+        
+        extract_recursive(source_data)
+        return numbers
+    def extract_channel_name(self,question:str, source_data:Dict) -> Optional[str]:
+        """
+        Try to detect the channel name from the user question if not provided.
+        """
+        question_lower = question.lower()
+        for ch in source_data.get('channels', []):
+            if ch['name'].lower() in question_lower or ch['id'].lower() in question_lower:
+                return ch['name']
+        return None
 
     def extract_metric_from_question(self, question: str) -> Optional[str]:
         """Detects which specific metric a user is asking about."""
@@ -117,6 +222,10 @@ class ResponseValidator:
         """
         # Step 1: Detect what metric the user is asking for
         target_metric = self.extract_metric_from_question(user_question)
+
+        if not channel_name:
+            channel_name = self.extract_channel_name(user_question, source_data)
+        
         if not target_metric or not channel_name:
             return {"specific_validation": False, "reason": "Could not identify specific metric or channel"}
         
