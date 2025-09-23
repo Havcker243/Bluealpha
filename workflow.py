@@ -4,13 +4,19 @@ import json
 with open("model_output.json", "r") as f:
     data = json.load(f)
 
+
 def list_channels():
     """Return available channel names/ids."""
     return [ch["name"] for ch in data["channels"]]
 
+
 def answer_channel_question(channel_name: str):
+    """Answer a question about a specific channel."""
+    #Search for channel by name or ID
     for ch in data["channels"]:
         if ch["name"].lower() == channel_name.lower() or ch["id"] == channel_name.lower():
+            
+            # Found the channel, construct the answer
             return {
                 "answer": f"In {data['period']}, {ch['name']} contributed {ch['contribution_pct']*100:.1f}% "
                           f"(≈${ch['incremental_kpi']:.0f}) on ${ch['spend']:.0f} spend. ROI ≈ {ch['roi']:.2f}.",
@@ -25,6 +31,7 @@ def answer_channel_question(channel_name: str):
                 "confidence": "High"
             }
     return {"error": f"Channel {channel_name} not found"}
+
 
 def get_safe_spend_range(channel_name: str):
     """Return safe observed spend range."""
@@ -44,6 +51,7 @@ def get_safe_spend_range(channel_name: str):
 
 def get_best_channel_by_roi():
     """Find channel with highest ROI."""
+    #Find channel with max ROI
     best = max(data["channels"], key=lambda ch: ch["roi"])
     return {
         "answer": f"In {data['period']}, {best['name']} had the highest ROI ≈ {best['roi']:.2f}.",

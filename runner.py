@@ -3,14 +3,20 @@ from workflow import answer_channel_question, get_safe_spend_range, get_best_cha
 from AI import ai_answer
 
 def main():
+    # Set up argument parser
     parser = argparse.ArgumentParser(description="MMM AI Workflow Runner")
+
+    # Define arguments
     parser.add_argument("--mode", choices=["channel", "safe", "best", "ai"], required=True,
                         help="Which function to run: channel, safe, best, ai")
+    
+    # Additional arguments based on mode
     parser.add_argument("--name", type=str, help="Channel name (for channel/safe/ai modes)")
     parser.add_argument("--question", type=str, help="User question (for ai mode only)")
     
     args = parser.parse_args()
 
+    # Execute based on mode
     if args.mode == "channel":
         if not args.name:
             print("Please provide --name for channel mode")

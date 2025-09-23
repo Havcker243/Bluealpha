@@ -45,7 +45,7 @@ class AIAnalyst:
         if not apikey:
             raise ValueError("Missing GEMINI_API_KEY in environment")
 
-        # configure gemini
+        # configure gemini, logs and validator
         genai.configure(api_key=apikey)
         self.model = genai.GenerativeModel(model_name)
         self.validator = ResponseValidator()
@@ -80,9 +80,11 @@ class AIAnalyst:
         """
         Logs the AI interaction to a timestamped file in the logs/ directory.
         """
+        # Create logs directory if it doesn't exist
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"logs/ai_response_{timestamp}.json"
 
+        # Save interaction details
         with open(filename, "w", encoding="utf-8") as f:
             log_entry = {
                 "question": user_question,
@@ -99,22 +101,28 @@ class AIAnalyst:
         """
         context = self.load_data(channel_name)
 
+        # Create the prompt
         prompt = f"""{self.SYSTEM_PROMPT}
                 User question: {user_question}
                 Here is the data: {json.dumps(context)} """
         response = self.model.generate_content(prompt)
         response_text = response.text
 
+        # Validate the response
         validation = self.validator.validate_response(ai_response=response_text,
                                                       source_data=context,
                                                       user_question=user_question,
                                                     channel_name=channel_name)
-
+        # Log the interaction
         self._log_interaction(user_question, channel_name, response_text, validation)
-        
+
+        # Append validation summary to response
         overall_valid = validation.get("overall_valid", True)
+
+        # Summarize validation results
         error_count = len(validation.get("general_validation", {}).get("errors", []))
 
+        # If adaptive validation was used, include its results
         if not overall_valid:
             response_text += f"\n\n[VALIDATION NOTE: Potential data discrepancies detected. {error_count} errors found.]"
 
